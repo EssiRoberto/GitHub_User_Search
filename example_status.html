@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Queries</title>
+</head>
+<body>
+    <button id="check-btn">Check Post</button>
+    <div id="msg"></div>
+    <script>
+        document.getElementById("check-btn").addEventListener("click", async function() {
+            const res = await fetch("https://jsonplaceholder.typicode.com/posts/99999");
+            if (res.ok) {
+                document.getElementById("msg").textContent = "Found";
+            } else {
+                document.getElementById("msg").textContent = "Not Found";
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="card"></div>
+
+    <script>
+        const profile = {name: "Alex Developer", role: "Software Engineer", projects: 12};
+        document.getElementById("card").innerHTML = `
+        <h3>${profile.name}</h3>
+        <p>${profile.role}</p>
+        <p>Projects: ${profile.projects}</p>
+        `;
+    </script>
+</body>
+</html>
